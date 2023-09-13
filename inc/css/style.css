@@ -1,0 +1,402 @@
+/**
+* NetApp Hotspot demo
+* Author: Kyle
+* 
+* Version: 0.1
+*/
+
+/**
+* Table of contents
+*
+* # Image Wrapper Styling
+* ## Hotspot Styling
+*
+*
+* # Climate Navigation Styling
+*/
+
+html {
+    box-sizing: border-box;
+}
+
+blockquote,
+body,
+dd,
+dl,
+dt,
+fieldset,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+html,
+iframe,
+legend,
+li,
+ol,
+p,
+pre,
+textarea,
+ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    margin: auto;
+    max-width: 1920px;
+}
+
+/**
+* Colors
+****************************/
+
+:root {
+    --dark: #000000;
+    --grey: #d9d9d9;
+    --light-primary: #ffffff;
+    --light-secondary: #f5fbff;
+    --green: #65d097;
+    --dark-green: #3ec47d;
+    --orange: #ffbca3;
+}
+
+
+/**
+* Typography
+****************************/
+
+body {
+    font-family: "Helvetica Neue",Arial,sans-serif;
+}
+
+h2 {
+    font-size: clamp(1rem, 0.4681rem + 1.7021vw, 2rem);
+    margin-bottom: 1em;
+}
+p {
+    font-size: clamp(0.75rem, 0.617rem + 0.4255vw, 1rem);
+}
+
+/**
+* General
+****************************/
+
+.primary-content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    max-height: 780px;
+}
+
+button {
+    background:none;
+    border: none;
+    color: var(--green);
+    cursor: pointer;
+}
+
+/**
+* Climate Navigation Styling
+****************************/
+
+.climate-navigation-wrapper {
+    grid-column: 4/5;
+    grid-row: 1/3;
+    padding: 2rem;
+    background-color: var(--green);
+    transition: all .3s ease-in-out;
+    /* display: initial; */
+    /* flex-basis: 25vw; */
+}
+
+.climate-navigation {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.climate-navigation button {
+    flex-basis: 100px;
+    background-color: var(--light-primary);
+    color: var(--dark);
+    font-size: 3rem;
+    border: 1px solid var(--dark);
+    width: 100px;
+}
+
+.climate-navigation button:hover {
+    color: var(--dark-green);
+}
+
+/*
+* Vehicle Tile Styling
+****************************/
+
+.vehicle-content-wrapper {
+    grid-column: 1/4;
+    grid-row: 1/3;
+    display: flex;
+    flex-flow: row nowrap;
+    /* flex-basis: 75dvw; */
+    aspect-ratio: 16 / 9;
+    position: relative;
+    overflow: hidden;
+}
+
+/*  Video BG Styling  */
+
+#video-bg {
+    display: none;
+    width: 100%;
+    margin: auto;
+    position: absolute;
+}
+
+.vehicle-content-wrapper.climate-active #video-bg {
+    display: block;
+}
+
+.vehicle-content-wrapper.static #video-bg {
+    display: none;
+}
+
+
+.vehicle-tile {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-basis: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    transition: flex-basis 1s ease-in-out;
+}
+
+.info-graphic-wrapper {
+    position: relative;
+    transform: rotate(0);
+}
+
+#f1-tile {
+    background-color: var(--light-secondary);
+}
+
+.vehicle-content-wrapper.static.altitude #f1-tile {
+    background-image: url('../../assets/video/f1/altitude/altitude-bg.png');
+    background-size: cover;
+}
+.vehicle-content-wrapper.static.cold #f1-tile {
+    background-image: url('../../assets/video/f1/cold/cold-bg.png');
+    background-size: cover;
+}
+.vehicle-content-wrapper.static.hot #f1-tile {
+    background-image: url('../../assets/video/f1/hot/hot-bg.png');
+    background-size: cover;
+}
+
+#video-bg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*
+* Hotspot Styling
+****************************/
+.hotspot-container {
+    display: none;
+}
+
+.vehicle-tile .hotspot-container {
+    display: block;
+}
+
+.hotspot-box {
+    aspect-ratio: 16 / 9;
+    width: 35vw;
+    max-width: calc(1920px*0.35);
+    /* border: 2px solid red; */
+}
+
+.hotspot {
+    display: none;
+}
+
+.vehicle-content-wrapper.climate-active .hotspot {
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    color: white;
+    transition: all 0.3s;
+}
+
+.hotspot button {
+    padding: 0.5em;
+    font-size: 1rem;
+    border-radius: 99px;
+    background-color: var(--dark);
+    color: var(--green);
+    height: min-content;
+}
+.hotspot button:hover {
+    color: var(--dark-green);
+}
+
+.hotspot-content-wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+    padding: 1em;
+    position: fixed;
+    bottom: 90%;
+    right: 0%;
+}
+
+.hotspot-content-wrapper.closed {
+    display: none;
+}
+
+
+/**
+* Hotspot Positioning
+**/
+
+#tires-hotspot {
+    right: 7%;
+    bottom: 50%;
+}
+
+#track-hotspot {
+    bottom: 10%;
+    left: 45%;
+}
+
+#driver-hotspot {
+    top: 15%;
+    right: 50%;
+}
+
+#suit-hotspot {
+    top: 15%;
+    right: 60%;
+}
+
+#cockpit-hotspot {
+    top: 15%;
+    right: 70%;
+}
+
+#driveability-hotspot {
+    top: 20%;
+    right: 50%;
+}
+
+#engine-hotspot {
+    top: 30%;
+    right: 35%;
+}
+
+#wing-hotspot {
+    top: 12%;
+    right: 5%;
+}
+
+#braking-hotspot {
+    left: 35%;
+    bottom: 50%;
+}
+
+#cooling-hotspot {
+    top: 10%;
+    right: 35%;
+}
+
+/**
+* Tablet Styling
+**/
+@media (max-aspect-ratio:  16/9) and (min-aspect-ratio: 1) and (max-width: 1100px){
+    .climate-navigation button {
+        flex-basis: 25%;
+        font-size: 2rem;
+        height: 25%;
+    }
+}
+@media (max-aspect-ratio: 1) and (max-width: 1100px) {
+    .vehicle-content-wrapper {
+        aspect-ratio: 16/9;
+        grid-column: 1/5;
+        grid-row: 1/2;
+        max-height: 780px;
+        overflow: hidden;
+    }
+    .hotspot-box {
+        width: 50dvw;
+    }
+    .climate-navigation-wrapper {
+        grid-column: 1/5;
+        grid-row: 2/3;
+    }
+    .climate-navigation {
+        flex-flow: row wrap;
+    }
+    .climate-navigation button {
+        flex-basis: 25%;
+        font-size: 2rem;
+        height: 100px;
+    }
+}
+
+/**
+* Mobile Styling
+**
+
+/** Landscape Styling **/
+
+@media (min-aspect-ratio: 16/9) and (max-width: 920px) {
+    .vehicle-content-wrapper {
+        aspect-ratio: 16/9;
+    }
+    .climate-navigation button {
+        flex-basis: 25%;
+        font-size: 2rem;
+        height: 100px;
+    }
+    .hotspot-box {
+        width: 40dvw;
+    }
+}
+/** Portrait Styling **/
+@media (max-aspect-ratio: 9/16) and (max-width: 920px) {
+    .primary-content-wrapper {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .vehicle-content-wrapper {
+        aspect-ratio: 1;
+        grid-column: 1/3;
+        grid-row: 1/3;
+        height: 100dvw;
+        width: 100dvw;
+        max-height: 616px;
+    }
+    .hotspot-box {
+        width: 90dvw;
+    }
+    .climate-navigation-wrapper {
+        grid-column: 1/3;
+        grid-row: 3/5;
+    }
+    .climate-navigation {
+        flex-flow: row;
+    }
+    .climate-navigation button {
+        flex-basis: 25%;
+        font-size: 2rem;
+        height: 100px;
+    }
+}

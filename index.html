@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Hot Spot</title>
+    <link rel="stylesheet" href="./inc/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./inc/js/functions.js"></script>
+</head>
+
+<body>
+    <div class="primary-content-wrapper">
+        <section class="vehicle-content-wrapper">
+            
+            <video disablePictureInPicture playsinline autoplay muted loop id="video-bg">
+                <source src="./assets/video/hot/hot-bg.webm" type="video/webm" title="Aston Martin F1 car hot weather Video">
+                <source src="./assets/video/hot/hot-bg.mp4" type="video/mp4" title="Aston Martin F1 car hot weather Video">
+                <img src="../../assets/video/f1/hot/hot-bg.png" title="Your browser does not support the &lt;video&gt; tag" >
+                    Your browser doesn't support HTML5 video.
+            </video>
+            <div class="vehicle-tile open" id="f1-tile">
+                <h2>Climate Title</h2>
+                <div class="info-graphic-wrapper">
+                    <div class="hotspot-box"></div>
+                    <div class="hotspot-container-wrapper">
+                        <div class="hotspot-container">
+                            <div class="hotspot" id="f1-cooling-hotspot">
+                                <button class="hotspot-button"><i class="fa-solid fa-location-dot"></i></button>
+                                <div class="hotspot-content-wrapper closed">
+                                    <h2>Title Goes Here</h2>
+                                    <p>Info Goes Here</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="climate-navigation-wrapper">
+            <nav class="climate-navigation">
+                <button class="climate-button" id="hot-climate-button" title="Hot Climate Button"><i class="fa-solid fa-fire"></i></button>
+                <!-- <button class="climate-button" id="cold-climate-button"><i class="fa-solid fa-snowflake"></i></button> -->
+                <button class="climate-button" id="wet-climate-button" title="Wet Climate Button"><i class="fa-solid fa-cloud-rain"></i></button>
+                <!-- <button class="climate-button" id="dry-climate-button"><i class="fa-solid fa-sun"></i></button> -->
+                <button class="climate-button" id="wind-climate-button" title="Wind Climate Button"><i class="fa-solid fa-wind"></i></button>
+                <button class="climate-button" id="altitude-climate-button" title="Altitude Climate Button"><i class="fa-solid fa-mountain"></i></button>
+            </nav>
+        </section>
+    </div>
+    <footer>
+        
+    </footer>
+</body>
+
+</html>
