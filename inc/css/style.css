@@ -116,19 +116,19 @@ button {
 
 .climate-navigation {
     display: flex;
-    flex-flow: column;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
     height: 100%;
 }
 
 .climate-navigation button {
-    flex-basis: 100px;
+    flex-basis: 45%;
+    height: 25%;
     background-color: var(--light-primary);
     color: var(--dark);
     font-size: 3rem;
     border: 1px solid var(--dark);
-    width: 100px;
 }
 
 .climate-navigation button:hover {
@@ -179,7 +179,7 @@ button {
 
 .info-graphic-wrapper {
     position: relative;
-    transform: rotate(0);
+    transform: translateX(10%);
 }
 
 #f1-tile {
@@ -219,9 +219,9 @@ button {
 
 .hotspot-box {
     aspect-ratio: 16 / 9;
-    width: 35vw;
-    max-width: calc(1920px*0.35);
-    /* border: 2px solid red; */
+    width: 40vw;
+    max-width: calc(1920px*0.4);
+    border: 2px solid red;
 }
 
 .hotspot {
@@ -278,18 +278,18 @@ button {
 }
 
 #driver-hotspot {
-    top: 15%;
-    right: 50%;
+    top: 25%;
+    right: 40%;
 }
 
 #suit-hotspot {
-    top: 15%;
-    right: 60%;
+    top: 40%;
+    right: 40%;
 }
 
 #cockpit-hotspot {
-    top: 15%;
-    right: 70%;
+    top: 25%;
+    right: 50%;
 }
 
 #driveability-hotspot {
@@ -303,18 +303,18 @@ button {
 }
 
 #wing-hotspot {
-    top: 12%;
+    top: 25%;
     right: 5%;
 }
 
 #braking-hotspot {
-    left: 35%;
+    left: 45%;
     bottom: 50%;
 }
 
 #cooling-hotspot {
-    top: 10%;
-    right: 35%;
+    top: 20%;
+    right: 30%;
 }
 
 /**
@@ -322,7 +322,7 @@ button {
 **/
 @media (max-aspect-ratio:  16/9) and (min-aspect-ratio: 1) and (max-width: 1100px){
     .climate-navigation button {
-        flex-basis: 25%;
+        /* flex-basis: 25%; */
         font-size: 2rem;
         height: 25%;
     }
@@ -344,9 +344,10 @@ button {
     }
     .climate-navigation {
         flex-flow: row wrap;
+        row-gap: 1rem;
     }
     .climate-navigation button {
-        flex-basis: 25%;
+        flex-basis: 30%;
         font-size: 2rem;
         height: 100px;
     }
