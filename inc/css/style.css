@@ -221,7 +221,7 @@ button {
     aspect-ratio: 16 / 9;
     width: 40vw;
     max-width: calc(1920px*0.4);
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 .hotspot {
