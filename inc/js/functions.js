@@ -73,9 +73,9 @@ jQuery(document).ready(function() {
         video[0].load();
         video[0].play();
 
-        if("hot" == climate || "cold" == climate || "altitude" == climate){
-            $('.vehicle-content-wrapper').addClass('static');
-        }
+        // if("hot" == climate || "cold" == climate || "altitude" == climate){
+        //     $('.vehicle-content-wrapper').addClass('static');
+        // }
 
         $.getJSON("./assets/text/hotspots.json",
             function (data) {
