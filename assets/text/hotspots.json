@@ -3,73 +3,73 @@
         "climate": {
             "altitude": {
                 "engine-hotspot": {
-                    "title": "Engine - High Altitude",
+                    "title": "Engine",
                     "text": "With thinner air, engines have less oxygen to combust with fuel, this reduces engine power teams can compensate for this by running the turbo harder to produce more boost."
                 },
                 "wing-hotspot": {
-                    "title": "Wing - High Altitude",
+                    "title": "Wing",
                     "text": "At higher altitudes the air is thinner meaning that there is less air to generate downforce, making the cars more difficult to drive."
                 },
                 "cooling-hotspot": {
-                    "title": "Cooling - High Altitude",
+                    "title": "Cooling",
                     "text": "Thin air is the theme here, at high altitude there is less air available to cool the car so cooling ducts are opened up to ensure the engine and other components such as the battery do not overheat."
                 }
             },
             "hot": {
                 "tires-hotspot": {
-                    "title": "Tires - Hot Climate",
+                    "title": "Tires",
                     "text": "High track temperatures can overheat the tires, causing them to blister and drastically reduces their life span."
                 },
                 "suit-hotspot": {
-                    "title": "Fireproof Clothing - Hot Climate",
+                    "title": "Fireproof Clothing",
                     "text": "All drivers have to wear homologated fireproof clothing which is not very breathable. Because of this, managing body temperature is a challenge whenever the driver is in the car."
                 },
                 "driver-hotspot": {
-                    "title": "Driver - Hot Climate",
+                    "title": "Driver",
                     "text": "Drivers have to deal with harsh conditions in the cockpit in hotter climates and can lose 4kg over a two-hour race, therefore hydration is the key to surviving."
                 },
                 "cockpit-hotspot": {
-                    "title": "Cockpit - Hot Climate",
+                    "title": "Cockpit",
                     "text": "The claustrophobically tight cockpit can reach 60°C and is a recipe for dehydration. To try and compensate, the car is often fitted with a drinking system."
                 },
                 "braking-hotspot": {
-                    "title": "Brakes - Hot Climate",
+                    "title": "Brakes",
                     "text": "Optimal brake cooling is essential at races with high temperatures. If brakes overheat it can result in catastrophic failure, ending the race for the team early."
                 },
                 "cooling-hotspot": {
-                    "title": "Cooling - Hot Climate",
+                    "title": "Cooling",
                     "text": "Opening up large airflow channels to cool the car has a direct impact on performance but it is especially important to stop components like the engine and gearbox from overheating."
                 }
             },
             "wet": {
                 "tires-hotspot":{
-                    "title": "Tires - Wet Climate",
+                    "title": "Tires",
                     "text": "Rain reduces grip drastically. Special tires with grooves and different compounds are used to clear surface water and raise the ride height of the car."
                 },
                 "track-hotspot": {
-                    "title": "Track - Wet Climate",
+                    "title": "Track",
                     "text": "In heavy rain the track surface can become saturated creating areas of standing water. Drivers often adjust their line to avoid these areas to save them from spinning out."
                 },
                 "driver-hotspot": {
-                    "title": "Helmet - Wet Climate",
+                    "title": "Helmet",
                     "text": "When it's wet, drivers have special visors fitted to their helmets with double glazing and are sometimes heated to prevent the visor from fogging up. All airflow channels are also closed off to stop the ingress of water."
                 },
                 "wing-hotspot": {
-                    "title": "Wing - Wet Climate",
+                    "title": "Wing",
                     "text": "Depending on when the rain is due in the race weekend teams will often run the maximum downforce package so you will see larger wings on most of the cars."
                 },
                 "braking-hotspot": {
-                    "title": "Braking - Wet Climate",
+                    "title": "Braking",
                     "text": "Heating the brakes in the rain is tricky for the driver, teams will blank off the brake cooling ducts to reduce the amount of airflow through the brakes."
                 },
                 "cooling-hotspot": {
-                    "title": "Cooling - Wet Climate",
+                    "title": "Cooling",
                     "text": "The water content in the air when it's raining helps to cool critical components more, because of this the openings for the radiators in the sidepods can be reduced."
                 }
             },
             "wind": {
                 "driveability-hotspot": {
-                    "title": "Driveability - Windy Climate",
+                    "title": "Driveability",
                     "text": "In windy conditions drivers need to pay attention to the wind direction. A tailwind is great for increasing top speed down the straights, but conversely bad for braking as downforce is reduced. In a headwind the opposite is true, drivers can brake a little bit later thanks to more aerodynamic load but the cars don't travel as fast."
                 }
             }

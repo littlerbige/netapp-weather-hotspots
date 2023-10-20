@@ -87,27 +87,24 @@ jQuery(document).ready(function() {
                     let new_hotspot = $("<div/>", {
                         "class": 'hotspot',
                         id: hotspot_id,
+                        "data-title": hotspot_title,
+                        "data-text": hotspot_text
                     });
                     $("<button class='hotspot-button'><i class='fa-solid fa-location-dot'></i></button>").appendTo(new_hotspot);
-                    let new_hotspot_content_wrapper = $("<div/>",{
-                        class: 'hotspot-content-wrapper closed'
-                    })
-                    $("<h2/>",{
-                        text: hotspot_title
-                    }).appendTo(new_hotspot_content_wrapper);
-                    $("<p/>",{
-                        text: hotspot_text
-                    }).appendTo(new_hotspot_content_wrapper);
-
-                    $(new_hotspot_content_wrapper).appendTo(new_hotspot);
+                    $('#climate-title').text("Climate: " + climate);
 
                     $(new_hotspot).appendTo(".hotspot-container");
                     
                 });
                 $(".hotspot").on("click",".hotspot-button", function(){
                     e.preventDefault();
-                    $(".hotspot-content-wrapper").not($(this).next()).addClass('closed');
-                    $(this).next().toggleClass('closed');
+                    // $(".hotspot-content-wrapper").not($(this).next()).addClass('closed');
+                    // $(this).next().toggleClass('closed');
+                    let hotspot = $(this).parent()[0];
+                    console.log(hotspot.dataset.title);
+
+                    $("#hotspot-title").text(hotspot.dataset.title);
+                    $("#hotspot-text").text(hotspot.dataset.text);
                     
                     $('i.fa-xmark').not($(this)[0].childNodes[0]).toggleClass('fa-location-dot fa-xmark');
                     let hotspot_icon = $(this)[0].childNodes[0];
